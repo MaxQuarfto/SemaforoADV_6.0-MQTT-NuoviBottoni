@@ -431,9 +431,14 @@ function changeOrien(e) {
 
   checkGhiaccio.x = largh / 10;
   checkGhiaccio.y = alt - (alt / 5.5);
+  checkGhiaccio.w = largh / 4;
+  checkGhiaccio.h = alt / 30;
 
   checkTrattore.x = largh / 10;
   checkTrattore.y = alt - alt / 7;
+  checkTrattore.w = largh / 4;
+  checkTrattore.h = alt / 30;
+
 
   console.log(largh, alt, windowWidth, windowHeight, larghOrig, altOrig);
 }
