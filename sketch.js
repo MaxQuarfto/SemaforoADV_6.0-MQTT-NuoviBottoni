@@ -312,7 +312,7 @@ function debug() {
   fill(130);
   text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
     " loadJson " + timeLoadJson +
-    "\n v 10.0 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
+    "\n v 11.0 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
   pop();
 }
 
