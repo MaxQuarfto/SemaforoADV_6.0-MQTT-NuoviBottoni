@@ -427,18 +427,20 @@ function changeOrien(e) {
   bottoneCambiaNome.y = alt / 7.5;
   bottoneCambiaNome.w = largh / 4;
   bottoneCambiaNome.h = alt / 30;
-  bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 0) });
+  bottoneCambiaNome.setStyle({ "textSize": (alt / 50) });
 
   checkGhiaccio.x = largh / 10;
   checkGhiaccio.y = alt - (alt / 5.5);
   checkGhiaccio.w = largh / 4;
   checkGhiaccio.h = alt / 30;
+  checkGhiaccio.setStyle({ textSize: alt / 60 });
+
 
   checkTrattore.x = largh / 10;
   checkTrattore.y = alt - alt / 7;
   checkTrattore.w = largh / 4;
   checkTrattore.h = alt / 30;
-
+  checkTrattore.setStyle({ textSize: alt / 60 });
 
   console.log(largh, alt, windowWidth, windowHeight, larghOrig, altOrig);
 }
