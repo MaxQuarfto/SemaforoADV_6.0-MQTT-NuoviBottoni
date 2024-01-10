@@ -423,6 +423,12 @@ function changeOrien(e) {
   bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 50) });
 
 
+  bottoneAudio.x = (largh / 16) * 9;
+  bottoneAudio.y = (alt / 12) * 6.5;
+  bottoneAudio.w = largh / 4;
+  bottoneAudio.h = alt / 15;
+  bottoneAudio.setStyle({ "textSize": (alt / 40) });
+
   bottoneCambiaNome.x = largh / 4;
   bottoneCambiaNome.y = alt / 7.5;
   bottoneCambiaNome.w = largh / 4;
