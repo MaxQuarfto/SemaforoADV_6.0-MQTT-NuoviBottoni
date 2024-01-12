@@ -78,7 +78,7 @@ function setup() {
   bottoneCambiaNome = createButton('Cambia nome', largh / 4, alt / 7.5, largh / 4, alt / 30);
   bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 200), "textSize": (alt / 50) });
 
-  etichettaSemaforo = createButton('', largh / 4, (alt / 20) * 15, largh / 2, alt / 20);
+  etichettaSemaforo = createButton('', largh / 4, (alt / 20) * 15, largh / 1.5, alt / 20);
   etichettaSemaforo.setStyle({ "fillLabel": color(255, 0, 0), "fillBg": color(200, 200, 200), "textSize": alt / 25 });
 
   checkGhiaccio = createToggle("Ghiaccio", 5, alt - alt / 5.5, largh / 2, alt / 30);
@@ -427,7 +427,7 @@ function changeOrien(e) {
 
   etichettaSemaforo.x = largh / 4;
   etichettaSemaforo.y = (alt / 20) * 15;
-  etichettaSemaforo.w = largh / 2;
+  etichettaSemaforo.w = largh / 1.5;
   etichettaSemaforo.h = alt / 20;
   etichettaSemaforo.setStyle({ "textSize": alt / 25 });
 
