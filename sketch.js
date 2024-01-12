@@ -73,7 +73,7 @@ function setup() {
   //   "Potreste incontrare qualcuno \n" +
   //   "senza applicazione!!",
   //   5, ((alt / 11) * 2), largh / 2, alt / 10);
-  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 40) });
+  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 55) });
 
   bottoneCambiaNome = createButton('Cambia nome', largh / 4, alt / 7.5, largh / 4, alt / 30);
   bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 200), "textSize": (alt / 50) });
@@ -316,7 +316,7 @@ function debug() {
   fill(130);
   text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
     " loadJson " + timeLoadJson +
-    "\n v 1.0 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
+    "\n v 1.1 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
   pop();
 }
 
@@ -424,7 +424,7 @@ function changeOrien(e) {
   bottoneWarning.y = (alt / 11) * 2;
   bottoneWarning.w = largh / 2;
   bottoneWarning.h = alt / 10;
-  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 50) });
+  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 55) });
 
   etichettaSemaforo.x = largh / 4;
   etichettaSemaforo.y = (alt / 20) * 15;
