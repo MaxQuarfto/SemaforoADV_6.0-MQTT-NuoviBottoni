@@ -425,6 +425,12 @@ function changeOrien(e) {
   bottoneWarning.h = alt / 10;
   bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 50) });
 
+  etichettaSemaforo.x = largh / 4;
+  etichettaSemaforo.y = (alt / 20) * 15;
+  etichettaSemaforo.w = largh / 2;
+  etichettaSemaforo.h = alt / 20;
+  etichettaSemaforo.setStyle({ "textSize": alt / 25 });
+
 
   bottoneAudio.x = (largh / 16) * 9;
   bottoneAudio.y = (alt / 12) * 6.5;
