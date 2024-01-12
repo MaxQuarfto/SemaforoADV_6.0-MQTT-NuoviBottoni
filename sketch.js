@@ -67,11 +67,13 @@ function setup() {
   bottoneAudio = createButton("Abilita audio", (largh / 16) * 9, (alt / 12) * 6.5, largh / 4, alt / 15);
   bottoneAudio.setStyle({ "fillBg": color(200, 200, 0), "textSize": (alt / 40) });
 
-  bottoneWarning = createButton("Salite e scendete con attenzione. \n" +
-    "Potreste incontrare qualcuno \n" +
-    "senza applicazione!!",
+  bottoneWarning = createButton("Salite e scendete con attenzione. Potreste incontrare qualcuno senza applicazione!!",
     5, ((alt / 11) * 2), largh / 2, alt / 10);
-  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 50) });
+  // bottoneWarning = createButton("Salite e scendete con attenzione. \n" +
+  //   "Potreste incontrare qualcuno \n" +
+  //   "senza applicazione!!",
+  //   5, ((alt / 11) * 2), largh / 2, alt / 10);
+  bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 40) });
 
   bottoneCambiaNome = createButton('Cambia nome', largh / 4, alt / 7.5, largh / 4, alt / 30);
   bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 200), "textSize": (alt / 50) });
@@ -162,7 +164,8 @@ function draw() {
     textAlign(CENTER, CENTER);
     rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
-    text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2);
+    // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
+    text("Benvenuto " + nome, largh / 4, alt / 15, largh / 4, alt / 15);
     pop();
   }
 
