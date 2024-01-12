@@ -982,11 +982,11 @@ class GuiButton extends GuiObject {
 
     if (this.val) {
       // text(this.labelOn, this.x + this.w / 2, this.y + this.h / 2);
-      text(this.labelOn, this.x, this.y, this.w, this.h);
+      text(this.labelOn, this.x, this.y, this.w * 0.9, this.h * 0.9);
     }
     else {
       // text(this.labelOff, this.x + this.w / 2, this.y + this.h / 2);
-      text(this.labelOff, this.x, this.y, this.w, this.h);
+      text(this.labelOff, this.x, this.y, this.w * 0.9, this.h);
     }
     ////console.log("textsize 991", this.label, this._style.textSize);
     pop();

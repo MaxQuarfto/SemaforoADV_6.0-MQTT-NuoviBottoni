@@ -81,12 +81,12 @@ function setup() {
   etichettaSemaforo = createButton('', largh / 4, (alt / 20) * 15, largh / 2, alt / 20);
   etichettaSemaforo.setStyle({ "fillLabel": color(255, 0, 0), "fillBg": color(200, 200, 200), "textSize": alt / 25 });
 
-  checkGhiaccio = createToggle("Ghiaccio", largh / 10, alt - alt / 5.5, largh / 4, alt / 30);
+  checkGhiaccio = createToggle("Ghiaccio", 5, alt - alt / 5.5, largh / 2, alt / 30);
   checkGhiaccio.setStyle({ fillBgOn: color(250, 0, 0), fillBgOnActive: color(250, 10, 0), fillBgOnHover: color(250, 10, 10) });
   checkGhiaccio.setStyle({ fillBgOff: color(0, 250, 0), fillBgOffActive: color(50, 250, 0), fillBgOffHover: color(0, 250, 50) });
   checkGhiaccio.setStyle({ textSize: alt / 60 });
 
-  checkTrattore = createToggle("Trattore", largh / 10, alt - alt / 7, largh / 4, alt / 30);
+  checkTrattore = createToggle("Trattore", 5, alt - alt / 7, largh / 2, alt / 30);
   checkTrattore.setStyle({ fillBgOn: color(250, 0, 0), fillBgOnActive: color(250, 10, 0), fillBgOnHover: color(250, 10, 10) });
   checkTrattore.setStyle({ fillBgOff: color(0, 250, 0), fillBgOffActive: color(50, 250, 0), fillBgOffHover: color(0, 250, 50) });
   checkTrattore.setStyle({ textSize: alt / 60 });
@@ -165,7 +165,7 @@ function draw() {
     rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
     // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
-    text("Benvenuto " + nome, largh / 4, alt / 15, largh / 4, alt / 15);
+    text("Benvenuto " + nome, largh / 4, alt / 15, (largh / 4) * 0.9, (alt / 15) * 0.9);
     pop();
   }
 
@@ -444,16 +444,16 @@ function changeOrien(e) {
   bottoneCambiaNome.h = alt / 30;
   bottoneCambiaNome.setStyle({ "textSize": (alt / 50) });
 
-  checkGhiaccio.x = largh / 10;
+  checkGhiaccio.x = 5;
   checkGhiaccio.y = alt - (alt / 5.5);
-  checkGhiaccio.w = largh / 4;
+  checkGhiaccio.w = largh / 2;
   checkGhiaccio.h = alt / 30;
   checkGhiaccio.setStyle({ textSize: alt / 60 });
 
 
-  checkTrattore.x = largh / 10;
+  checkTrattore.x = 5;
   checkTrattore.y = alt - alt / 7;
-  checkTrattore.w = largh / 4;
+  checkTrattore.w = largh / 2;
   checkTrattore.h = alt / 30;
   checkTrattore.setStyle({ textSize: alt / 60 });
 
