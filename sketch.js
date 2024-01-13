@@ -102,7 +102,7 @@ function setup() {
     nome = prompt("Come ti chiami?");
     storeItem("Nome", nome);
   }
-
+  frameRate(10);
   textAlign(CENTER);
   ellipseMode(CENTER);
 }
@@ -175,7 +175,7 @@ function draw() {
     statoSemOld = statoSem;
     parla.setVoice(4);
     parla.speak(scritta);
-    blink = 30;
+    blink = 20;
   }
   if (errorMessage) {
     textSize(alt / 40);
@@ -316,7 +316,7 @@ function debug() {
   fill(100);
   text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
     " loadJson " + timeLoadJson +
-    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt + " MQTT Subs " + gotMqttSubscribe, 5, (alt / 30) * 28, largh, alt / 3);
+    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + "\n MQTT " + gotMqtt + " MQTT Subs " + gotMqttSubscribe + " fps " + round(frameRate()), 5, (alt / 30) * 28, largh, alt / 3);
   pop();
 }
 
