@@ -313,10 +313,10 @@ function convertUnixTime(uTime) {
 function debug() {
   push();
   textSize(alt / 60);
-  fill(130);
+  fill(100);
   text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
     " loadJson " + timeLoadJson +
-    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
+    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt + " MQTT Subs " + gotMqttSubscribe, 5, (alt / 30) * 28, largh, alt / 3);
   pop();
 }
 
