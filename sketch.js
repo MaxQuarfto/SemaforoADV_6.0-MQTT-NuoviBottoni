@@ -76,7 +76,7 @@ function setup() {
   bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 55) });
 
   bottoneCambiaNome = createButton('Cambia nome', largh / 4, alt / 7.5, largh / 4, alt / 30);
-  bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 200), "textSize": (alt / 50) });
+  bottoneCambiaNome.setStyle({ "fillBg": color(200, 200, 200), "textSize": (alt / 60) });
 
   etichettaSemaforo = createButton('', largh / 4, (alt / 20) * 15, largh / 1.5, alt / 20);
   etichettaSemaforo.setStyle({ "fillLabel": color(255, 0, 0), "fillBg": color(200, 200, 200), "textSize": alt / 25 });
@@ -162,7 +162,7 @@ function draw() {
     push();
     fill("yellow");
     textAlign(CENTER, CENTER);
-    textSize(alt / 40);
+    textSize(alt / 50);
     rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
     // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
@@ -443,7 +443,7 @@ function changeOrien(e) {
   bottoneCambiaNome.y = alt / 7.5;
   bottoneCambiaNome.w = largh / 4;
   bottoneCambiaNome.h = alt / 30;
-  bottoneCambiaNome.setStyle({ "textSize": (alt / 50) });
+  bottoneCambiaNome.setStyle({ "textSize": (alt / 60) });
 
   checkGhiaccio.x = 5;
   checkGhiaccio.y = alt - (alt / 5.5);
