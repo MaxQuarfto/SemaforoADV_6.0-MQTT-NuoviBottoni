@@ -314,9 +314,9 @@ function debug() {
   push();
   textSize(alt / 60);
   fill(100);
-  text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
-    " loadJson " + timeLoadJson +
-    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + "\n MQTT " + gotMqtt + " MQTT Subs " + gotMqttSubscribe + " fps " + round(frameRate()), 5, (alt / 30) * 28, largh, alt / 3);
+  text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj + " loadJson " + timeLoadJson + "\n" +
+    "v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + "\n" +
+    "MQTT " + gotMqtt + " MQTT Subs " + gotMqttSubscribe + " fps " + round(frameRate()), 5, (alt / 30) * 27, largh, alt / 3);
   pop();
 }
 
