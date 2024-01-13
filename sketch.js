@@ -166,7 +166,7 @@ function draw() {
     rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
     // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
-    text("Benvenuto " + nome, largh / 4, alt / 15, (largh / 4) * 0.9, (alt / 15) * 0.9);
+    text("Benvenuto " + nome, (largh / 4) + largh / 4 * 0.05, alt / 15 + (alt / 15) * 0.05, (largh / 4) * 0.95, (alt / 15) * 0.95);
     pop();
   }
 
@@ -316,7 +316,7 @@ function debug() {
   fill(130);
   text("Loc: " + convertUnixTime(Date.now() / 1000) + " Rem " + convertUnixTime(time / 1000) + " adj " + dateAdj +
     " loadJson " + timeLoadJson +
-    "\n v 1.1 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
+    "\n v 1.2 larg " + largh + " alt " + alt + " " + screen.orientation.type + " " + info() + " MQTT " + gotMqtt, 5, (alt / 30) * 28, largh, alt / 3);
   pop();
 }
 

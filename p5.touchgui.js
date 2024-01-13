@@ -982,11 +982,11 @@ class GuiButton extends GuiObject {
 
     if (this.val) {
       // text(this.labelOn, this.x + this.w / 2, this.y + this.h / 2);
-      text(this.labelOn, this.x, this.y, this.w * 0.9, this.h * 0.9);
+      text(this.labelOn, this.x + this.w * 0.05, this.y + this.h * 0.05, this.w * 0.95, this.h * 0.95);
     }
     else {
       // text(this.labelOff, this.x + this.w / 2, this.y + this.h / 2);
-      text(this.labelOff, this.x, this.y, this.w * 0.9, this.h);
+      text(this.labelOff, this.x + this.w * 0.05, this.y + this.h * 0.05, this.w * 0.95, this.h * 0.95);
     }
     ////console.log("textsize 991", this.label, this._style.textSize);
     pop();
@@ -1101,11 +1101,11 @@ class GuiToggle extends GuiObject {
 
     if (this.val) {
       // text(this.labelOn, this.x + this.w / 2, this.y + this.h / 2, this.w);
-      text(this.labelOn, this.x, this.y, this.w, this.h);
+      text(this.labelOn, this.x + this.w * 0.05, this.y + this.h * 0.05, this.w * 0.95, this.h * 0.95);
     }
     else {
       // text(this.labelOff, this.x + this.w / 2, this.y + this.h / 2, this.w, this.h);
-      text(this.labelOff, this.x, this.y, this.w, this.h);
+      text(this.labelOff, this.x + this.w * 0.05, this.y + this.h * 0.05, this.w * 0.95, this.h * 0.95);
     }
     pop();
 
