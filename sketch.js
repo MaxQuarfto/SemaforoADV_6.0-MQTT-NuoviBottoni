@@ -3,7 +3,7 @@ const rosso = 50; //tempo per percorrere il tratto in secondi
 
 let gui;
 let bottoneWarning;
-let bottoneAudio;
+let bottoneMeteo;
 let bottoneCambiaNome;
 let checkGhiaccio;
 let checkTrattore;
@@ -37,6 +37,7 @@ let alt;
 let orient = "portrait";
 let larghOrig;
 let altOrig;
+showMeteo = false;
 
 let gotMqtt = false; //lo stato della connessione mqtt
 let gotMqttSubscribe = false;
@@ -64,8 +65,9 @@ function setup() {
   gui = createGui();
   //gui.setTextSize(40);
 
-  bottoneAudio = createButton("Abilita audio", (largh / 16) * 9, (alt / 12) * 6.5, largh / 4, alt / 15);
-  bottoneAudio.setStyle({ "fillBg": color(200, 200, 0), "textSize": (alt / 40) });
+  //  bottoneMeteo = createButton("Meteo", (largh / 16) * 9, (alt / 12) * 6.5, largh / 4, alt / 15);
+  bottoneMeteo = createButton("Meteo", (largh / 16) * 9, (alt / 12) * 6.5, largh / 4, alt / 15);
+  bottoneMeteo.setStyle({ "fillBg": color(200, 200, 0), "textSize": (alt / 40) });
 
   bottoneWarning = createButton("Salite e scendete con attenzione. Potreste incontrare qualcuno senza applicazione!!",
     5, ((alt / 11) * 2), largh / 2, alt / 10);
@@ -105,6 +107,7 @@ function setup() {
   frameRate(10);
   textAlign(CENTER);
   ellipseMode(CENTER);
+  LoadJsonM();
 }
 
 function draw() {
@@ -118,6 +121,7 @@ function draw() {
   } else {
     background(150, 150, 200);
   }
+
   image(logo, 0, 0, min(alt, largh) / 6, min(alt, largh) / 6);
   disegnaSemaforo((largh / 16) * 9, alt / 10, colAltoSemSu, colCentroSemSu, colBassoSemSu, "MONTE", attesaDiscesa);
   disegnaSemaforo((largh / 16) * 4, (alt / 10) * 3, colAltoSemGiu, colCentroSemGiu, colBassoSemGiu, "VALLE", attesaSalita);
@@ -190,6 +194,18 @@ function draw() {
   if (checkGhiaccio.isPressed) allGhiaccioCambiato();
   if (checkTrattore.isPressed) allTrattoreCambiato();
   drawGui();
+  if (bottoneMeteo.isPressed) showMeteo = !showMeteo;
+  if (showMeteo) {
+    push();
+    fill(200, 250, 200, 150);
+    rect(0, 0, largh / 4, alt / 6, 5);
+    fill("black");
+    textSize(alt / 50);
+    textAlign(LEFT);
+    textStyle(BOLD);
+    text(readMeteo(), 5, 5, largh / 4, alt / 6);
+    pop();
+  }
 }
 
 
@@ -433,11 +449,11 @@ function changeOrien(e) {
   etichettaSemaforo.setStyle({ "textSize": alt / 25 });
 
 
-  bottoneAudio.x = (largh / 16) * 9;
-  bottoneAudio.y = (alt / 12) * 6.5;
-  bottoneAudio.w = largh / 4;
-  bottoneAudio.h = alt / 15;
-  bottoneAudio.setStyle({ "textSize": (alt / 40) });
+  bottoneMeteo.x = (largh / 16) * 9;
+  bottoneMeteo.y = (alt / 12) * 6.5;
+  bottoneMeteo.w = largh / 4;
+  bottoneMeteo.h = alt / 15;
+  bottoneMeteo.setStyle({ "textSize": (alt / 40) });
 
   bottoneCambiaNome.x = largh / 4;
   bottoneCambiaNome.y = alt / 7.5;
