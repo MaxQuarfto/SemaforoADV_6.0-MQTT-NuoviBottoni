@@ -16,7 +16,6 @@ function meteoStatus() {
 }
 
 function readMeteo() {
-    console.log("meteoStatus", meteoStatus);
     if (!gotMeteo) return ("Meteo non disponibile");
     temperature = LoadJsonMeteo.main.temp;
     vento = LoadJsonMeteo.wind.speed;
