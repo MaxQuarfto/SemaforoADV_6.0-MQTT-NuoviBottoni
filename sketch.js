@@ -71,10 +71,6 @@ function setup() {
 
   bottoneWarning = createButton("Salite e scendete con attenzione. Potreste incontrare qualcuno senza applicazione!!",
     5, ((alt / 11) * 2), largh / 2, alt / 10);
-  // bottoneWarning = createButton("Salite e scendete con attenzione. \n" +
-  //   "Potreste incontrare qualcuno \n" +
-  //   "senza applicazione!!",
-  //   5, ((alt / 11) * 2), largh / 2, alt / 10);
   bottoneWarning.setStyle({ "fillBg": color(255, 0, 0), "textSize": (alt / 55) });
 
   bottoneCambiaNome = createButton('Cambia nome', largh / 4, alt / 7.5, largh / 4, alt / 30);
@@ -198,12 +194,12 @@ function draw() {
   if (showMeteo) {
     push();
     fill(200, 250, 200, 150);
-    rect(0, 0, largh / 4, alt / 6, 5);
+    rect(0, 0, largh / 3, alt / 6, 5);
     fill("black");
     textSize(alt / 50);
-    textAlign(LEFT);
+    textAlign(LEFT, TOP);
     textStyle(BOLD);
-    text(readMeteo(), 5, 5, largh / 4, alt / 6);
+    text(readMeteo(), 5, 5, largh / 3, alt / 6);
     pop();
   }
 }
@@ -270,24 +266,13 @@ function semaforo() {
   time = Date.now() - dateAdj * 1000;
   finestra =
     (time % ((verdeSalita + rosso + verdeDiscesa + rosso) * 1000)) / 1000;
-  if (Math.floor(finestra) < verdeSalita) {
-    messaggio = "sali";
-  }
-  if (
-    Math.floor(finestra) >= verdeSalita &&
-    Math.floor(finestra) < verdeSalita + rosso
-  ) {
-    messaggio = "aspetta";
-  }
-  if (
-    Math.floor(finestra) >= verdeSalita + rosso &&
-    Math.floor(finestra) < verdeSalita + rosso + verdeDiscesa
-  ) {
-    messaggio = "scendi";
-  }
-  if (Math.floor(finestra) >= verdeSalita + rosso + verdeDiscesa) {
-    messaggio = "aspetta";
-  }
+  if (Math.floor(finestra) < verdeSalita) messaggio = "sali";
+
+  if (Math.floor(finestra) >= verdeSalita && Math.floor(finestra) < verdeSalita + rosso) messaggio = "aspetta";
+
+  if (Math.floor(finestra) >= verdeSalita + rosso && Math.floor(finestra) < verdeSalita + rosso + verdeDiscesa) messaggio = "scendi";
+
+  if (Math.floor(finestra) >= verdeSalita + rosso + verdeDiscesa) messaggio = "aspetta";
   if (Math.floor(finestra) < verdeSalita + rosso) {
     attesaDiscesa = verdeSalita + rosso - Math.floor(finestra);
   } else {

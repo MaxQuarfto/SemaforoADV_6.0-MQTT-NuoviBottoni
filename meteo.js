@@ -13,7 +13,6 @@ function LoadJsonM() {
 
 function meteoStatus() {
     gotMeteo = true;
-    console.log("got meteo");
 }
 
 function readMeteo() {
