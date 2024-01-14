@@ -162,7 +162,7 @@ function draw() {
     push();
     fill("yellow");
     textAlign(CENTER, CENTER);
-    textSize(alt / 50);
+    textSize(alt / 55);
     rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
     // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
