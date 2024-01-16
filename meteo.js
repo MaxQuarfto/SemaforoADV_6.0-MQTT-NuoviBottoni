@@ -6,34 +6,35 @@ let iconLoaded = false;
 let gotMeteo = false;
 
 function LoadJsonM() {
-    let url =
-        "https://api.openweathermap.org/data/2.5/weather?q=Camugnano&units=metric&lang=it&APPID=e812164ca05ed9e0344b89ebe273c141";
-    LoadJsonMeteo = loadJSON(url, meteoStatus);
+  let url =
+    "https://api.openweathermap.org/data/2.5/weather?q=Camugnano&units=metric&lang=it&APPID=e812164ca05ed9e0344b89ebe273c141";
+  LoadJsonMeteo = loadJSON(url, meteoStatus);
 }
 
 function meteoStatus() {
-    gotMeteo = true;
+  gotMeteo = true;
 }
 
 function readMeteo() {
-    if (!gotMeteo) return ("Meteo non disponibile");
-    temperature = LoadJsonMeteo.main.temp;
-    vento = LoadJsonMeteo.wind.speed;
-    weather = LoadJsonMeteo.weather[0].description;
-    iconLink = "https://openweathermap.org/img/wn/" + LoadJsonMeteo.weather[0].icon + "@2x.png";
-    //iconImage = loadImage(iconLink, imageLoaded);
-    tramonto = new Date(LoadJsonMeteo.sys.sunrise);
-    return ("temp: " + temperature + String.fromCharCode(176) + "\n" +
-        "vento: " + vento + " m/s \n" +
-        "Previsioni: " + weather + "\n" +
-        "Alba: " + convertDate(LoadJsonMeteo.sys.sunrise) + "\n" +
-        "Tramonto: " + convertDate(LoadJsonMeteo.sys.sunset));
+  if (!gotMeteo) return ("Meteo non disponibile");
+  temperature = LoadJsonMeteo.main.temp;
+  vento = LoadJsonMeteo.wind.speed;
+  weather = LoadJsonMeteo.weather[0].description;
+  iconLink = "https://openweathermap.org/img/wn/" + LoadJsonMeteo.weather[0].icon + "@2x.png";
+  //iconImage = loadImage(iconLink, imageLoaded);
+  tramonto = new Date(LoadJsonMeteo.sys.sunrise);
+  return ("temp: " + temperature + String.fromCharCode(176) + "\n" +
+    "vento: " + vento + " m/s \n" +
+    "Previsioni: " + weather + "\n" +
+    "Alba: " + convertDate(LoadJsonMeteo.sys.sunrise * 1000) + "\n" +
+    "Tramonto: " + convertDate(LoadJsonMeteo.sys.sunset * 1000));
 }
 
 
 function convertDate(dateNumber) {
-    dataLetta = new Date(dateNumber);
-    return dataLetta.getHours() + ":" + dataLetta.getMinutes();
+  dataLetta = new Date(dateNumber);
+  var minutes = "0" + dataLetta.getMinutes();
+  return (dataLetta.getHours() + ":" + minutes.substr(-2));
 }
 
 /*
