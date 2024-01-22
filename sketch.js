@@ -164,10 +164,10 @@ function draw() {
     fill("yellow");
     textAlign(CENTER, CENTER);
     textSize(alt / 55);
-    rect(largh / 2, alt / 15, largh / 4, alt / 15);
+    rect(largh / 4, alt / 15, largh / 4, alt / 15);
     fill("black");
     // text("Benvenuto \n" + nome, largh / 4 + largh / 4 / 2, alt / 15 + alt / 15 / 2, largh / 4, alt / 15);
-    text("Benvenuto " + nome, (largh / 2) + largh / 4 * 0.05, alt / 15 + (alt / 15) * 0.05, (largh / 4) * 0.95, (alt / 15) * 0.95);
+    text("Benvenuto " + nome, (largh / 4) + largh / 8 * 0.05, alt / 15 + (alt / 15) * 0.05, (largh / 4) * 0.95, (alt / 15) * 0.95);
     pop();
   }
 
